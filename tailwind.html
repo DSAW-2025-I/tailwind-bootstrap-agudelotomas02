@@ -2,31 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind | Stats Preview Card Component</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Tailwind | Stats preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
 
-  Get insights that help your business grow.
+<body class="bg-[#090b1a] flex justify-center items-center min-h-screen px-6">
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
+  <div class="bg-[#1b1938] max-w-4xl w-full rounded-lg overflow-hidden flex flex-col md:flex-row">
+    
+    <div class="p-8 text-center md:text-left flex flex-col justify-center md:w-1/2">
+      <h1 class="text-white text-3xl font-bold">
+        Get <span class="text-[#aa5cdb]">insights</span> that help your business grow.
+      </h1>
+      <p class="text-[#ffffffbf] text-sm mt-4">
+        Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
+      </p>
+      
+      <div class="flex flex-col md:flex-row justify-around mt-6 space-y-4 md:space-y-0">
+        <div class="text-center">
+          <h2 class="text-white text-xl font-bold">10k+</h2>
+          <p class="text-[#ffffff99] text-xs tracking-widest">COMPANIES</p>
+        </div>
+        <div class="text-center">
+          <h2 class="text-white text-xl font-bold">314</h2>
+          <p class="text-[#ffffff99] text-xs tracking-widest">TEMPLATES</p>
+        </div>
+        <div class="text-center">
+          <h2 class="text-white text-xl font-bold">12M+</h2>
+          <p class="text-[#ffffff99] text-xs  tracking-widest">QUERIES</p>
+        </div>
+      </div>
+    </div>
+    <div class="relative md:w-1/2">
+      <picture>
+        <source media="(max-width: 768px)" srcset="./images/image-header-mobile.jpg">
+        <img src="./images/image-header-desktop.jpg" alt="Picture header" class="w-full h-full object-cover">
+      </picture>
+      <div class="absolute inset-0 bg-[#aa5cdb] mix-blend-multiply opacity-70"></div>
+    </div>
 
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
 </html>
